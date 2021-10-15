@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Route, Switch} from "react-router-dom";
+import Profile from "./ui/component/profile/Profile";
+import LoginPage from "./ui/component/login/LoginPage";
+import PasswordEntry from "./ui/component/password/PasswordEntry";
+import RegistrationPage from "./ui/component/registration/RegistrationPage";
+import NavLinkPage from "./ui/component/common/navlink/Navlink";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <NavLinkPage/>
+        <Switch>
+            <Route path="/profile" render={()=><Profile/>}/>
+            <Route path="/login" render={()=><LoginPage/>}/>
+            <Route path="/password" render={()=><PasswordEntry/>}/>
+            <Route path="/registration" render={()=><RegistrationPage/>}/>
+        </Switch>
     </div>
   );
 }
