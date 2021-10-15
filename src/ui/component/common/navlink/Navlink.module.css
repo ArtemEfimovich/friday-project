@@ -1,16 +1,18 @@
 
 .nav{
-    grid-area: n;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     background-color: khaki;
     padding: 30px;
 }
 
 .item a{
-    color:white;
+    color:darkcyan;
     text-decoration: none;
 
 }
 
-.item a:active{
-    color: darkcyan;
+.item a:active:hover{
+    color: white;
 }

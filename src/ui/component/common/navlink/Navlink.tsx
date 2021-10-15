@@ -19,6 +19,9 @@ const NavLinkPage = () => {
             <div className={s.item}>
                 <NavLink to="/registration">Registration</NavLink>
             </div>
+            <div className={s.item}>
+                <NavLink to="/error">error404</NavLink>
+            </div>
         </nav>
 
     );

@@ -6,6 +6,10 @@ import LoginPage from "./ui/component/login/LoginPage";
 import PasswordEntry from "./ui/component/password/PasswordEntry";
 import RegistrationPage from "./ui/component/registration/RegistrationPage";
 import NavLinkPage from "./ui/component/common/navlink/Navlink";
+import Input from "./ui/component/common/input/Input";
+import CheckBox from "./ui/component/common/checkbox/CheckBox";
+import Button from "./ui/component/common/button/Button";
+import Error from "./ui/component/error/Error";
 
 function App() {
   return (
@@ -16,7 +20,12 @@ function App() {
             <Route path="/login" render={()=><LoginPage/>}/>
             <Route path="/password" render={()=><PasswordEntry/>}/>
             <Route path="/registration" render={()=><RegistrationPage/>}/>
+            <Route path="/error" render={()=><Error/>}/>
+
         </Switch>
+        <Input />
+        <CheckBox isChecked={true}/>
+        <Button name={'button'} onClickHandler={(() => {})}/>
     </div>
   );
 }
