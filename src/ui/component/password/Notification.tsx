@@ -13,7 +13,7 @@ import email from './Email.png'
                 <div className={s.email}>
                     <img src={email} alt="send"/></div>
                 <div className={s.placeholder}>
-                    <span>We’ve sent an Email with instructions to dmitry.malykhin@mail.ru</span>
+                    <span>We’ve sent an Email with instructions to artemfender@gmail.com</span>
                 </div>
 
             </div>

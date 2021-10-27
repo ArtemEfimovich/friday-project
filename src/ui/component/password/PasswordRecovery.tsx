@@ -16,7 +16,7 @@ import SuperButton from "../common/button/Button";
 
     const message = `<div>
 						вы отправили запрос на восстановления пароля, для продожения перейдите по ссылке:
-						<a href='https://mitrich83.github.io/Cards/#/new-password/$token$'>link
+						<a href='https://artemefimovich.github.io/friday-project/#/new-password/$token$'>link
 						</a>
 						если это были на Вы - то ничего не делайте
 					</div>`
