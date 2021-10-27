@@ -7,14 +7,20 @@ import {PATH} from "../../routes/Routes";
 const NavLinkPage = () => {
     return (
         <nav className={s.nav}>
-            <div>
+            <div className={s.item}>
                 <NavLink to={PATH.LOGIN}>Login</NavLink>
             </div>
-            <div>
+            <div className={s.item}>
                 <NavLink to={PATH.PROFILE}>Profile</NavLink>
             </div>
-            <div>
+            <div className={s.item}>
                 <NavLink to={PATH.REGISTRATION}>Registration</NavLink>
+            </div>
+            <div className={s.item}>
+                <NavLink to={PATH.CARDS}>Cards</NavLink>
+            </div>
+            <div className={s.item}>
+                <NavLink to={PATH.PACKS}>Packs</NavLink>
             </div>
         </nav>
 
