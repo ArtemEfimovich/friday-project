@@ -1,0 +1,37 @@
+.register{
+    width: 413px;
+    height: 540px;
+    margin: 84px auto;
+    background: #F9F9FE;
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.description{
+
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 39px;
+}
+.buttons{
+    width: 80%;
+    margin: 35px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+.error{
+    position: absolute;
+    width: 100%;
+    color: red;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 39px;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}

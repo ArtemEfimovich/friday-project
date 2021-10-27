@@ -1,3 +1,61 @@
-.button{
+.default {
+    box-shadow: 3px 4px 0px 0px #1564ad;
+    background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+    background-color:#79bbff;
+    border-radius:5px;
+    border:1px solid #337bc4;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    font-weight:bold;
+    padding:5px 10px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #528ecc;
+    margin: 5px;
+}
 
+.default:hover {
+    background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    background-color:#378de5;
+}
+.default:active {
+    position:relative;
+    top:1px;
+}
+
+
+.default:disabled {
+    border: 1px solid #999999;
+    background: #cccccc;;
+    color: #666666;
+
+}
+
+
+.red {
+    box-shadow: 3px 4px 0px 0px #1564ad;
+    background:linear-gradient(to bottom, darkred 5%, red 100%);
+    background-color:darkred;
+    border-radius:5px;
+    border:1px solid #337bc4;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    font-weight:bold;
+    padding:5px 10px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #528ecc;
+}
+.red:active {
+    position:relative;
+    top:1px;
+}
+
+.red:hover{
+    background:linear-gradient(to bottom, red 5%, darkred 100%);
+    background-color:red;
 }

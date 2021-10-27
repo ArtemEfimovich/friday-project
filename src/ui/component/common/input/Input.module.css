@@ -1,0 +1,27 @@
+.superInput {
+    font: bold .6em sans-serif;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    background-color: #8842d5;
+    border: 5px solid #8842d5;
+    color: white;
+}
+
+.errorInput {
+    border: 3px solid lime;
+    background: lightsteelblue;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+}
+
+.span {
+    font-family: Lucida Handwriting;
+    font-size: 16px;
+    color: #6699CC;
+    font-weight: bold;
+}

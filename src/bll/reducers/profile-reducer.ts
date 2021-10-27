@@ -1,19 +1,24 @@
 
+const initState = {
+    title: ''
+}
 
-
-
-type ProfileStateType ={}
-type ActionType = ReturnType<any>
-
-const profileReducer = (state:ProfileStateType,action:ActionType) => {
-
+export const ProfileReducer = (state = initState, action: ProfileACType)=> {
     switch (action.type) {
+        case 'SHOW-PROFILE': {
+            return {
+                ...state,
+                newPassword: action.title
+            }
+        }
         default:
             return state
-
     }
 
 }
 
 
-export default profileReducer;
+type ProfileACType = ReturnType<typeof profileAC>
+
+export const profileAC = (title: string) => (
+    {type: 'SHOW-PROFILE', title } as const )
