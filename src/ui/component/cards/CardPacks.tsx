@@ -1,6 +1,5 @@
 import React from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {AppRootStateType} from "../../../bll/store/store";
+import {useDispatch} from "react-redux";
 import {getCardsPack} from "../../../bll/reducers/card-packs-reducer";
 
 
