@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {NavLink, Redirect} from 'react-router-dom';
 import {useDispatch, useSelector} from "react-redux";
 import s from "./LoginPage.module.css"
