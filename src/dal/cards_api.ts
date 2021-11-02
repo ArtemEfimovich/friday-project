@@ -19,12 +19,42 @@ const instance= axios.create({
     withCredentials: true,
 })
 
+export type CardResponseType = {
+    cards: Array<CardsType>,
+    packUserId: string,
+    page: number,
+    pageCount: number,
+    cardsTotalCount: number,
+    minGrade: number,
+    maxGrade: number,
+    token: string,
+    tokenDeathTime: number
+}
 
-
-
+export type CardsType = {
+    answer: string,
+    question: string,
+    cardsPack_id: string,
+    grade: number,
+    rating: number,
+    shots: number,
+    type: string,
+    user_id: string,
+    created: string,
+    updated: string,
+    __v: number,
+    _id: string
+}
 
 export const cardsAPI = {
-    cardsPack(){
-        return instance.get<AxiosResponse<CardsParamsResponse>>("cards/pack")
+    cardsPack(packName?: string|null,min?: number, max?:number,sortPacks?:any,page?: number,pageCount?: string,user_id?: string){
+        return instance.get<{ params:{min?: number, max?:number,sortPacks?:any,page?: number,pageCount?: number,user_id?: string} },
+            AxiosResponse<CardsParamsResponse>>("cards/pack",
+            {params:{packName,min,max,sortPacks,page,pageCount,user_id}})
+    },
+    getCard(cardAnswer:string,cardQuestion: string,cardsPack_id: string, page?:number,pageCount?:number,sortCards?:string){
+        return instance.get<{params:{cardAnswer:string,cardQuestion: string,cardsPack_id: string, page?:number,pageCount?:number,sortCards?:string}},
+            AxiosResponse<CardResponseType>>('/cards/card',
+            {params:{cardAnswer,cardQuestion,cardsPack_id,sortCards,page,pageCount}})
     }
 }

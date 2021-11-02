@@ -1,5 +1,6 @@
 import {Dispatch} from "redux";
 import {cardsAPI} from "../../dal/cards_api";
+import {AppRootStateType} from "../store/store";
 
 type ActionsType =
     ReturnType<typeof setPacksAC>
@@ -57,7 +58,7 @@ export const CardPacksReducer = (state: InitialStateType = initialState, action:
     switch (action.type) {
         case 'SET-PACKS':
             return {
-                ...state, cardsPacks: action.cardsPacks.push()
+                ...state, cardsPacks: action.cardsPacks
             }
         default:
             return {...state}
@@ -65,13 +66,14 @@ export const CardPacksReducer = (state: InitialStateType = initialState, action:
 }
 
 
-export const setPacksAC = (cardsPacks: CardsPacksType[]) => ({type: 'SET-PACKS', cardsPacks} as const)
+export const setPacksAC = (cardsPacks: Array<CardsPacksType>) => ({type: 'SET-PACKS', cardsPacks} as const)
 
 
-export const getCardsPack =()=>(dispatch: Dispatch<ActionsType>)=>{
+export const getCardsPack =()=>(dispatch: Dispatch<ActionsType>,getState: ()=>AppRootStateType)=>{
+    const startValue=getState().cardPacks
     cardsAPI.cardsPack()
         .then(res=>{
-            dispatch(setPacksAC(res.data.data.cardPacks))
-            debugger
+            dispatch(setPacksAC(res.data.cardPacks))
+
         })
 }
